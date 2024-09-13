@@ -11,7 +11,7 @@ const store = useMainStore()
 
 <template>
     <div class="my-5" v-for="page in pagesArray" :key="page">
-        <button :class="{ 'bg-[#FC4308] text-white': page === store.page }"
+        <button :class="{ 'bg-[#FC4308] text-white': page === store.currentPage }"
             class="p-5 shadow-xl text-lg border border-solid border-white-600 rounded-xl"
             @click="store.handleChangePage(page)">{{ page
             }}</button>

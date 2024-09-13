@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
 import { useMainStore } from "../store";
-import Pagination from './Pagination.vue'
 import SavedCard from "./SavedCard.vue";
 const store = useMainStore()
 
@@ -17,7 +16,7 @@ onMounted(() => {
             <h2 class="text-2xl">Nothing to Show</h2>
         </div>
         <div v-else class="flex flex-wrap xl:justify-between justify-center">
-            <div v-for="article in store.savedArticles" :key="article.url">
+            <div v-for="article in store.getSavedArticles" :key="article.url">
                 <SavedCard :article="article" />
             </div>
         </div>

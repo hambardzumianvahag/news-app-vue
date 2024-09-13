@@ -21,7 +21,7 @@ const classByColumn = computed(() => {
 <template>
     <div>
         <h2 class="text-[12px] text-[#3E323280]"> <span class="font-medium text-black">Home</span> &#62; {{
-            store.category }}</h2>
+            store.currentCategory }}</h2>
         <div class="md:flex xl:gap-5 gap-1 justify-between items-center bg-[#f5f5f5] p-5 my-10 rounded-xl">
             <div v-for="category in store.categories" :key="category" class="text-[#3E3232BF]">
                 <p :class="{ 'text-[#FC4308]': category === store.category }" class="md:my-0 my-5 cursor-pointer"
